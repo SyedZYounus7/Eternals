@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Title</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            ;
+            background-color: rgb(3, 3, 34);
+            font-family: monospace;
+            color: whitesmoke;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #mainframe{
+            height:100vh;
+            border: 2px solid whitesmoke;
+            margin-top: 3%;
+            min-width: 97%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        #mainbody {
+            border: 2px solid whitesmoke;
+            margin-top: 3%;
+            min-width: 97%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="mainframe">
+        <div id="sidebar">
+
+        </div>
+        <div id="mainbody" class="mainbody">
+            <div id="headcontents">
+                <h1 id="h1">Welcome to the Eternals</h1>
+            </div>
+            <div id="maincontents"></div>
+        </div>
+    </div>
+
+    <script>
+        var title = document.getElementById("#h1")
+        function colorch() {
+            var red = Math.floor(Math.random() * 256);
+            var green = Math.floor(Math.random() * 256);
+            var blue = Math.floor(Math.random() * 256);
+            for (var a = 0; a < 10; a++) {
+                a.style.color = "rgb(" + red + "," + green + "," + blue + ")"
+            }
+            setInterval(colorch,1000)
+        }
+    </script>
+</body>
+
+</html>
