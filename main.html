@@ -19,9 +19,9 @@
             align-items: center;
         }
         #mainframe{
-            height:100vh;
+            /* height:100vh; */
             border: 2px solid whitesmoke;
-            margin-top: 3%;
+            margin-top: 0.7%;
             min-width: 97%;
             display: flex;
             flex-direction: column;
@@ -30,7 +30,7 @@
         #mainbody {
             border: 2px solid whitesmoke;
             margin-top: 3%;
-            min-width: 97%;
+            min-width: 98%;
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -45,23 +45,26 @@
         </div>
         <div id="mainbody" class="mainbody">
             <div id="headcontents">
-                <h1 id="h1">Welcome to the Eternals</h1>
+                <h1 id="titleh">Welcome to the Eternals</h1>
             </div>
             <div id="maincontents"></div>
         </div>
     </div>
 
     <script>
-        var title = document.getElementById("#h1")
+        var title = document.getElementById("#titleh");
+        title.style.color = "green";
         function colorch() {
             var red = Math.floor(Math.random() * 256);
             var green = Math.floor(Math.random() * 256);
             var blue = Math.floor(Math.random() * 256);
-            for (var a = 0; a < 10; a++) {
-                a.style.color = "rgb(" + red + "," + green + "," + blue + ")"
+            for (var a = 0; a > 10; a++) {
+                title.style.color = "rgb(" + red + "," + green + "," + blue + ")"
             }
-            setInterval(colorch,1000)
+            
         }
+        setInterval(colorch,1000)
+        
     </script>
 </body>
 
