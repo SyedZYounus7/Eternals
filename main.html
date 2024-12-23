@@ -4,68 +4,141 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Title</title>
+    <title>Document</title>
     <style>
+        /* Body Styles */
         body {
+            font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
             height: 100vh;
-            ;
+            display: flex;
+            flex-direction: column;
             background-color: rgb(3, 3, 34);
-            font-family: monospace;
-            color: whitesmoke;
-            display: flex;
-            flex-direction: column;
             align-items: center;
         }
-        #mainframe{
-            /* height:100vh; */
-            border: 2px solid whitesmoke;
-            margin-top: 0.7%;
+
+        /* Navbar Styles */
+        .navbar {
+            position: fixed;
+            padding: 8px;
             min-width: 97%;
+            /* min-height: 6%; */
+            color: aqua;
+            border: 2px solid rgb(7, 229, 250);
+            border-radius: 12px;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
+            /* background-color: rgb(36, 29, 52); */
+            background-color: #0D1B2A;
+            margin-bottom: 8px;
+            /* Add a small margin for spacing */
         }
-        #mainbody {
-            border: 2px solid whitesmoke;
-            margin-top: 3%;
-            min-width: 98%;
+
+        .navleftcontents,
+        .navrightcontents {
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+            /* Base font size */
+        }
+
+        .navleftcontents {
+            gap: 15px;
+        }
+
+        .navrightcontents {
+            gap: 10px;
+        }
+
+        /* Intro Content Styles */
+        .introcontents {
+            margin-top: 5em;
+            min-width: 94%;
+            max-width: 93%;
+            min-height: 82%;
+            border: 2px solid aqua;
+            border-radius: 12px;
+            color: aqua;
+            padding: 20px;
+            /* Add padding for content */
             display: flex;
             flex-direction: column;
             align-items: center;
+            /* background-color: rgb(19, 16, 78); */
+            background: #0D1B2A;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            /* Base font size */
+            color: rgb(7, 246, 210);
+            margin-bottom: 10px;
+            /* Add some margin */
+        }
+
+        img {
+            max-width: 30%;
+            /* Adjust image size to be smaller */
+            margin-bottom: 10px;
+            /* Add some margin */
+        }
+
+        h2 {
+            font-size: 1.2rem;
+            /* Base font size */
+            margin-bottom: 10px;
+            /* Add some margin */
+        }
+
+        .cntnts {
+            color: rgb(116, 13, 250);
+
+        }
+
+        .cntnts:hover {
+            color: darkturquoise;
+            cursor: pointer;
+        }
+
+        /* Media Queries for Smaller Screens */
+        @media (max-width: 768px) {
+
+            /* Reduce font size for mobile devices */
+            .navbar,
+            .introcontents h1,
+            .introcontents h2,
+            .knowmore h2,
+            .links {
+                font-size: 0.8em;
+                /* Adjust as needed for desired size */
+            }
         }
     </style>
 </head>
 
 <body>
-    <div id="mainframe">
-        <div id="sidebar">
 
-        </div>
-        <div id="mainbody" class="mainbody">
-            <div id="headcontents">
-                <h1 id="titleh">Welcome to the Eternals</h1>
+    <body>
+        <div class="navbar">
+            <div class="navleftcontents">
+                <h2>Welcome to the Eternals</h2>
             </div>
-            <div id="maincontents"></div>
-        </div>
-    </div>
+            <div class="navrightcontents">
 
-    <script>
-        var title = document.getElementById("#titleh");
-        title.style.color = "green";
-        function colorch() {
-            var red = Math.floor(Math.random() * 256);
-            var green = Math.floor(Math.random() * 256);
-            var blue = Math.floor(Math.random() * 256);
-            for (var a = 0; a > 10; a++) {
-                title.style.color = "rgb(" + red + "," + green + "," + blue + ")"
-            }
-            
-        }
-        setInterval(colorch,1000)
-        
-    </script>
+            </div>
+        </div>
+        <div class="introcontents">
+            <h1>Projects</h1>
+            <a href="https://syedzyounus7.github.io/The34thBatch"  target="_parent">
+                <h3 class="cntnts">The 34th Batch</h3>
+            </a>
+        </div>
+        <script>
+        </script>
+
+    </body>
 </body>
 
 </html>
